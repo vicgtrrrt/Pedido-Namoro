@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido de Namoro</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(https://4.bp.blogspot.com/-28pmA0DohwU/Uzia0LHH9NI/AAAAAAAAGcU/dnzv-iu_Lpk/s1600/Love-Lessons_Ariel_Little-Mermaid-.jpg);
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            transition: background-image 0.5s ease-in-out;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #nao {
+            position: absolute;
+        }
+        #mensagem {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff0000;
+        }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Quer namorar comigo?</h1>
+<button id="sim" onclick="escolhaSim()">Sim</button>
+<button id="nao" onclick="escolhaNao()">Não</button>
+<p id="mensagem"></p>
+</div>
+ 
+    <script>
+        function escolhaSim() {
+            document.getElementById('mensagem').innerText = 'Parabéns!!! Você fez uma ótima escolha, Eu te amo <3';
+            document.body.style.backgroundImage = "url('https://i.imgur.com/7UKpudX.png')";
+        }
+ 
+        function escolhaNao() {
+            var btnNao = document.getElementById('nao');
+            var x = Math.random() * (window.innerWidth - btnNao.clientWidth);
+            var y = Math.random() * (window.innerHeight - btnNao.clientHeight);
+            btnNao.style.left = x + 'px';
+            btnNao.style.top = y + 'px';
+        }
+</script>
+</body>
+</html>
